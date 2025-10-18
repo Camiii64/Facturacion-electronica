@@ -1,0 +1,42 @@
+﻿@model IEnumerable<FacturacionDTE.Models.Factura>
+@{
+    ViewData["Title"] = "Facturas";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h4>Facturas</h4>
+    <div>
+        <a class="btn btn-outline-secondary me-2" href="/Facturas/Index">Refrescar</a>
+        <a class="btn btn-primary" href="/Facturas/Create">Nueva factura</a>
+    </div>
+</div>
+
+<table class="table table-hover table-bordered align-middle">
+    <thead class="table-primary">
+        <tr>
+            <th style="width:70px;">ID</th>
+            <th>Número</th>
+            <th>Empresa</th>
+            <th>Cliente</th>
+            <th class="text-end">Total</th>
+            <th>Fecha</th>
+            <th style="width:120px;">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var f in Model)
+        {
+            <tr>
+                <td>@f.Id</td>
+                <td>@f.NumeroFactura</td>
+                <td>@f.Empresa?.Nombre</td>
+                <td>@f.Cliente?.Nombre</td>
+                <td class="text-end">@string.Format("{0:N2}", f.Total)</td>
+                <td>@f.FechaEmision.ToString("yyyy-MM-dd")</td>
+                <td>
+                    <a class="btn btn-sm btn-outline-primary" href="/Facturas/Details/@f.Id">Ver</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

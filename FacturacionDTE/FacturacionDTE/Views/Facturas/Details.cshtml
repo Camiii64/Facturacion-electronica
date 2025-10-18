@@ -1,0 +1,183 @@
+﻿@{
+    ViewData["Title"] = "Vista previa del Documento Tributario Electrónico (DTE)";
+}
+
+<div class="container py-4">
+    <h2 class="text-center fw-bold text-primary mb-4">
+        Vista Previa del Documento Tributario Electrónico (DTE)
+    </h2>
+
+    <!-- ENCABEZADO -->
+    <div class="card mb-3 shadow-sm">
+        <div class="card-header bg-primary text-white fw-bold">
+            ENCABEZADO DEL DTE
+        </div>
+        <div class="card-body">
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <th>tipoDte</th>
+                        <td>01</td>
+                        <th>numControl</th>
+                        <td>DTE-00000123</td>
+                    </tr>
+                    <tr>
+                        <th>codigoGeneracion</th>
+                        <td>UUID-FAKE-123456789</td>
+                        <th>fecEmi</th>
+                        <td>@DateTime.Now.ToString("yyyy-MM-dd")</td>
+                    </tr>
+                    <tr>
+                        <th>tipoModelo</th>
+                        <td>1</td>
+                        <th>tipoTransmision</th>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- DATOS DEL EMISOR -->
+    <div class="card mb-3 shadow-sm">
+        <div class="card-header bg-success text-white fw-bold">
+            EMISOR
+        </div>
+        <div class="card-body">
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr><th>nit</th><td>0614-251225-102-8</td></tr>
+                    <tr><th>nrc</th><td>123456-7</td></tr>
+                    <tr><th>nombre</th><td>Factura Electrónica Gabriela Figueroa</td></tr>
+                    <tr><th>direccion</th><td>San Salvador, El Salvador</td></tr>
+                    <tr><th>correo</th><td>contacto@facturagf.com</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- DATOS DEL RECEPTOR -->
+    <div class="card mb-3 shadow-sm">
+        <div class="card-header bg-secondary text-white fw-bold">
+            RECEPTOR
+        </div>
+        <div class="card-body">
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr><th>nombre</th><td>Cliente de Prueba</td></tr>
+                    <tr><th>nit</th><td>0614-180190-102-5</td></tr>
+                    <tr><th>correo</th><td>cliente@email.com</td></tr>
+                    <tr><th>direccion</th><td>Santa Tecla, La Libertad</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- DETALLE -->
+    <div class="card mb-3 shadow-sm">
+        <div class="card-header bg-dark text-white fw-bold">
+            DETALLE DE OPERACIÓN
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered align-middle text-center">
+                <thead class="table-light">
+                    <tr>
+                        <th>numItem</th>
+                        <th>codigo</th>
+                        <th>descripcion</th>
+                        <th>cantidad</th>
+                        <th>precioUni</th>
+                        <th>montoDescu</th>
+                        <th>ventaNoSuj</th>
+                        <th>ventaExenta</th>
+                        <th>ventaGravada</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>001</td>
+                        <td>Servicio de mantenimiento</td>
+                        <td>1.00</td>
+                        <td>100.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>100.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- RESUMEN -->
+    <div class="card mb-3 shadow-sm">
+        <div class="card-header bg-warning fw-bold">
+            RESUMEN DEL DTE
+        </div>
+        <div class="card-body">
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr><th>totalNoSuj</th><td>0.00</td></tr>
+                    <tr><th>totalExenta</th><td>0.00</td></tr>
+                    <tr><th>totalGravada</th><td>100.00</td></tr>
+                    <tr><th>subTotalVentas</th><td>100.00</td></tr>
+                    <tr><th>montoTotalOperacion</th><td>113.00</td></tr>
+                    <tr><th>totalPagar</th><td>113.00</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- VISTA JSON -->
+    <div class="card mb-3 shadow-sm">
+        <div class="card-header bg-info text-white fw-bold">
+            VISTA JSON SIMULADA
+        </div>
+        <div class="card-body">
+<pre class="bg-light p-3 border rounded">
+{
+  "identificacion": {
+    "version": 1,
+    "ambiente": "00",
+    "tipoDte": "01",
+    "numControl": "DTE-00000123",
+    "codigoGeneracion": "UUID-FAKE-123456789",
+    "fecEmi": "@DateTime.Now.ToString("yyyy-MM-dd")"
+  },
+  "emisor": {
+    "nit": "0614-251225-102-8",
+    "nrc": "123456-7",
+    "nombre": "Factura Electrónica Gabriela Figueroa",
+    "direccion": "San Salvador, El Salvador",
+    "correo": "contacto@facturagf.com"
+  },
+  "receptor": {
+    "nombre": "Cliente de Prueba",
+    "nit": "0614-180190-102-5",
+    "correo": "cliente@email.com",
+    "direccion": "Santa Tecla, La Libertad"
+  },
+  "cuerpoDocumento": [
+    {
+      "numItem": 1,
+      "descripcion": "Servicio de mantenimiento",
+      "cantidad": 1,
+      "precioUni": 100.00,
+      "ventaGravada": 100.00
+    }
+  ],
+  "resumen": {
+    "totalGravada": 100.00,
+    "iva": 13.00,
+    "montoTotalOperacion": 113.00
+  }
+}
+</pre>
+        </div>
+    </div>
+
+    <div class="text-end mt-3">
+        <a href="/Facturas/Create" class="btn btn-secondary">← Regresar al Formulario</a>
+    </div>
+</div>

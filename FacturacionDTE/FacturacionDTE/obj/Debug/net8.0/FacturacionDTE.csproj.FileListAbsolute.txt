@@ -1,0 +1,56 @@
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\FacturacionDTE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\FacturacionDTE.AssemblyInfoInputs.cache
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\FacturacionDTE.AssemblyInfo.cs
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\FacturacionDTE.csproj.CoreCompileInputs.cache
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\FacturacionDTE.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\FacturacionDTE.RazorAssemblyInfo.cache
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\FacturacionDTE.RazorAssemblyInfo.cs
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\scopedcss\bundle\FacturacionDTE.styles.css
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\scopedcss\projectbundle\FacturacionDTE.bundle.scp.css
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\staticwebassets\msbuild.FacturacionDTE.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\staticwebassets\msbuild.FacturacionDTE.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\staticwebassets\msbuild.build.FacturacionDTE.props
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.FacturacionDTE.props
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.FacturacionDTE.props
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\FacturacionDTE.dll
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\refint\FacturacionDTE.dll
+C:\Users\gabri\OneDrive\Documents\ciencias de la computacion\Desarrollo de Apli_de software propietario\Proyecto de catedra-Factura\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\FacturacionDTE.pdb
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\bin\Debug\net8.0\appsettings.json
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\bin\Debug\net8.0\FacturacionDTE.staticwebassets.runtime.json
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\bin\Debug\net8.0\FacturacionDTE.staticwebassets.endpoints.json
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\bin\Debug\net8.0\FacturacionDTE.exe
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\bin\Debug\net8.0\FacturacionDTE.deps.json
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\bin\Debug\net8.0\FacturacionDTE.runtimeconfig.json
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\bin\Debug\net8.0\FacturacionDTE.dll
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\bin\Debug\net8.0\FacturacionDTE.pdb
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\FacturacionDTE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\FacturacionDTE.AssemblyInfoInputs.cache
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\FacturacionDTE.AssemblyInfo.cs
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\FacturacionDTE.csproj.CoreCompileInputs.cache
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\FacturacionDTE.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\FacturacionDTE.RazorAssemblyInfo.cache
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\FacturacionDTE.RazorAssemblyInfo.cs
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\scopedcss\bundle\FacturacionDTE.styles.css
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\scopedcss\projectbundle\FacturacionDTE.bundle.scp.css
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\staticwebassets\msbuild.FacturacionDTE.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\staticwebassets\msbuild.FacturacionDTE.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\staticwebassets\msbuild.build.FacturacionDTE.props
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.FacturacionDTE.props
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.FacturacionDTE.props
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\FacturacionDTE.dll
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\refint\FacturacionDTE.dll
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\FacturacionDTE.pdb
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\FacturacionDTE.genruntimeconfig.cache
+C:\Users\gabri\OneDrive\Documents\Factura-Proyecto-Catedra\FacturacionDTE\FacturacionDTE\obj\Debug\net8.0\ref\FacturacionDTE.dll

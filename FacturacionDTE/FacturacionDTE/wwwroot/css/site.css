@@ -1,0 +1,28 @@
+.bg-azul {
+    background-color: #5564eb !important;
+}
+
+.text-azul {
+    color: #3B82F6 !important;
+}
+
+.btn-azul {
+    background-color: #1D4ED8 !important;
+    border-color: #1D4ED8 !important;
+    color: white !important;
+}
+
+    .btn-azul:hover {
+        background-color: #3B82F6 !important;
+        border-color: #3B82F6 !important;
+    }
+
+.table-azul thead {
+    background-color: #3B82F6 !important;
+    color: white !important;
+}
+
+.card-header-azul {
+    background-color: #1E3A8A !important;
+    color: white !important;
+}

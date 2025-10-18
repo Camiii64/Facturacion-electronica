@@ -1,0 +1,25 @@
+﻿@model IEnumerable<FacturacionDTE.Models.Empresa>
+@{
+    ViewData["Title"] = "Empresas";
+}
+<div class="d-flex justify-content-between mb-3">
+    <h4>Empresas</h4>
+    <a class="btn btn-primary" href="/Empresas/Create">Nueva</a>
+</div>
+<table class="table">
+    <thead><tr><th>ID</th><th>Nombre</th><th>NIT</th><th>Dirección</th><th></th></tr></thead>
+    <tbody>
+        @foreach (var e in Model)
+        {
+            <tr>
+                <td>@e.Id</td>
+                <td>@e.Nombre</td>
+                <td>@e.NIT</td>
+                <td>@e.Direccion</td>
+                <td>
+                    <a class="btn btn-sm btn-outline-primary" href="/Empresas/Edit/@e.Id">Editar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
