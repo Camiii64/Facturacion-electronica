@@ -21,14 +21,14 @@ namespace FacturacionDTE.Controllers
             [HttpPost]
             public IActionResult Create(Producto nuevo)
             {
-                nuevo.IdProducto = productos.Count + 1;
+                nuevo.ProductoId = productos.Count + 1;
                 productos.Add(nuevo);
                 return RedirectToAction("Index");
             }
 
             public IActionResult Edit(int id)
             {
-                var prod = productos.FirstOrDefault(p => p.IdProducto == id);
+                var prod = productos.FirstOrDefault(p => p.ProductoId == id);
                 if (prod == null) return NotFound();
                 return View(prod);
             }
@@ -36,12 +36,12 @@ namespace FacturacionDTE.Controllers
             [HttpPost]
             public IActionResult Edit(Producto editado)
             {
-                var prod = productos.FirstOrDefault(p => p.IdProducto == editado.IdProducto);
+                var prod = productos.FirstOrDefault(p => p.ProductoId == editado.ProductoId);
                 if (prod == null) return NotFound();
 
                 prod.Nombre = editado.Nombre;
                 prod.Descripcion = editado.Descripcion;
-                prod.PrecioUnitario = editado.PrecioUnitario;
+                prod.Precio = editado.Precio;
                 prod.Existencias = editado.Existencias;
                 prod.Categoria = editado.Categoria;
                 prod.TipoItem = editado.TipoItem;
@@ -52,7 +52,7 @@ namespace FacturacionDTE.Controllers
 
             public IActionResult Delete(int id)
             {
-                var prod = productos.FirstOrDefault(p => p.IdProducto == id);
+                var prod = productos.FirstOrDefault(p => p.ProductoId == id);
                 if (prod != null) productos.Remove(prod);
                 return RedirectToAction("Index");
             }

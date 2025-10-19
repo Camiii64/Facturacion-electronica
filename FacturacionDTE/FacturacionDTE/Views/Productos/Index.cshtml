@@ -31,13 +31,13 @@
                         <tr>
                             <td>@item.Codigo</td>
                             <td>@item.Nombre</td>
-                            <td>$@item.PrecioUnitario</td>
+                            <td>$@item.Precio</td>
                             <td>@item.Existencias</td>
                             <td>@item.Categoria</td>
                             <td>@(item.TipoItem == 1 ? "Bien" : "Servicio")</td>
                             <td>
-                                <a asp-action="Edit" asp-route-id="@item.IdProducto" class="btn btn-warning btn-sm"><i class="bi bi-pencil-square"></i></a>
-                                <a asp-action="Delete" asp-route-id="@item.IdProducto" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></a>
+                                <a asp-action="Edit" asp-route-id="@item.ProductoId" class="btn btn-warning btn-sm"><i class="bi bi-pencil-square"></i></a>
+                                <a asp-action="Delete" asp-route-id="@item.ProductoId" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></a>
                             </td>
                         </tr>
                     }
