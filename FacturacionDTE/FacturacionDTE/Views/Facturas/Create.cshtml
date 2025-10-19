@@ -1,41 +1,253 @@
 ﻿@model FacturacionDTE.Models.Document
 
-@{
-    ViewData["Title"] = "Nueva Factura";
+@{ ViewData["Title"] = "Crear Factura Electrónica (DTE)";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Nueva Factura</h2>
+<link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="~/css/site.css" />
 
-<form asp-action="Create" method="post" class="mt-3">
-    <div class="mb-3">
-        <label class="form-label">Cliente</label>
-        <select asp-for="ClienteId" class="form-control" asp-items="@(new SelectList(ViewBag.Clientes, "ClienteId", "Nombre"))">
-            <option value="">Seleccione un cliente</option>
-        </select>
-    </div>
+<div class="container py-4">
+    <h2 class="text-center text-azul fw-bold mb-4">💊 Emisión de Factura Electrónica (DTE)</h2>
 
-    <div class="mb-3">
-        <label class="form-label">Emisor</label>
-        <select asp-for="EmisorId" class="form-control" asp-items="@(new SelectList(ViewBag.Emisores, "EmisorId", "Nombre"))">
-            <option value="">Seleccione un emisor</option>
-        </select>
-    </div>
+    <form asp-action="Create" method="post" id="formDTE">
 
-    <div class="mb-3">
-        <label class="form-label">Número de Factura</label>
-        <input asp-for="NumeroFactura" class="form-control" />
-    </div>
+        <!--encabezado-->
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header card-header-azul">
+                <i class="bi bi-file-earmark-text"></i> Datos Generales
+            </div>
+            <div class="card-body row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">Tipo de Documento</label>
+                    <select class="form-select" name="tipoDte">
+                        <option value="FACT">Factura Electrónica (FACT)</option>
+                        <option value="CCF">Comprobante de Crédito Fiscal (CCF)</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Número de Control</label>
+                    <input type="text" class="form-control" name="numeroControl" placeholder="DTE-001-000000001" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Código de Generación (UUID)</label>
+                    <input type="text" class="form-control" name="codigoGeneracion" placeholder="Se generará automáticamente" readonly>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Tipo de Modelo</label>
+                    <select class="form-select" name="tipoModelo">
+                        <option value="1">1 - Normal</option>
+                        <option value="2">2 - Prevalorado</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Tipo de Operación</label>
+                    <select class="form-select" name="tipoOperacion">
+                        <option value="1">1 - Interna</option>
+                        <option value="2">2 - Exportación</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Tipo de Transmisión</label>
+                    <select class="form-select" name="tipoTransmision">
+                        <option value="1">1 - Normal</option>
+                        <option value="2">2 - Contingencia</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Fecha de Emisión</label>
+                    <input type="date" class="form-control" name="fecEmi" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Hora de Emisión</label>
+                    <input type="time" class="form-control" name="horEmi" required>
+                </div>
+            </div>
+        </div>
 
-    <div class="mb-3">
-        <label class="form-label">Moneda</label>
-        <input asp-for="Moneda" class="form-control" value="USD" />
-    </div>
+        <!-- emisor-->
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header card-header-azul">
+                <i class="bi bi-hospital"></i> Datos del Emisor (Farmacia Salud )
+            </div>
+            <div class="card-body row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">NIT</label>
+                    <input type="text" class="form-control" value="0614-123456-102-3" readonly>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">NRC</label>
+                    <input type="text" class="form-control" value="123456-7" readonly>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Nombre / Razón Social</label>
+                    <input type="text" class="form-control" value="Farmacia Salud S.A. de C.V." readonly>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Actividad Económica</label>
+                    <input type="text" class="form-control" value="4773 - Venta de productos farmacéuticos" readonly>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Departamento</label>
+                    <select id="emisorDepartamento" class="form-select"></select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Municipio</label>
+                    <select id="emisorMunicipio" class="form-select"></select>
+                </div>
+                <div class="col-md-12">
+                    <label class="form-label">Dirección</label>
+                    <input type="text" class="form-control" value="Av. Central #123, San Salvador" readonly>
+                </div>
+            </div>
+        </div>
 
-    <div class="mb-3">
-        <label class="form-label">Total</label>
-        <input asp-for="Total" class="form-control" type="number" step="0.01" />
-    </div>
+        <!--receptor -->
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header card-header-azul">
+                <i class="bi bi-person-vcard"></i> Datos del Receptor
+            </div>
+            <div class="card-body row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">Tipo de Documento</label>
+                    <select class="form-select" name="tipoDocumento">
+                        <option value="DUI">DUI</option>
+                        <option value="NIT">NIT</option>
+                        <option value="PAS">Pasaporte</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Número de Documento</label>
+                    <input type="text" class="form-control" name="numDocumento" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Tipo de Contribuyente</label>
+                    <select class="form-select" name="tipoContribuyente">
+                        <option value="Consumidor Final">Consumidor Final</option>
+                        <option value="Contribuyente">Contribuyente</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Nombre o Razón Social</label>
+                    <input type="text" class="form-control" name="nombre" required>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Departamento</label>
+                    <select id="receptorDepartamento" class="form-select"></select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Municipio</label>
+                    <select id="receptorMunicipio" class="form-select"></select>
+                </div>
+                <div class="col-md-12">
+                    <label class="form-label">Dirección</label>
+                    <input type="text" class="form-control" name="direccion" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Teléfono</label>
+                    <input type="text" class="form-control" name="telefono">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Correo</label>
+                    <input type="email" class="form-control" name="correo">
+                </div>
+            </div>
+        </div>
 
-    <button type="submit" class="btn btn-primary">Guardar Factura</button>
-    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
-</form>
+        <!-- detalles del producto-->
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header card-header-azul">
+                <i class="bi bi-capsule"></i> Detalle de Productos
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-sm align-middle table-azul" id="tablaProductos">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Descripción</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Tipo Item</th>
+                            <th>Venta No Suj.</th>
+                            <th>Exenta</th>
+                            <th>Gravada</th>
+                            <th>Subtotal</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <button type="button" id="btnAgregar" class="btn btn-azul btn-sm">
+                    <i class="bi bi-plus-circle"></i> Agregar Producto
+                </button>
+            </div>
+        </div>
+
+        <!--resumen-->
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <i class="bi bi-calculator"></i> Totales y Resumen
+            </div>
+            <div class="card-body row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">Total No Sujetas</label>
+                    <input type="number" step="0.01" class="form-control" id="totalNoSuj" name="totalNoSuj" value="0.00">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Total Exentas</label>
+                    <input type="number" step="0.01" class="form-control" id="totalExenta" name="totalExenta" value="0.00">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Total Gravadas</label>
+                    <input type="number" step="0.01" class="form-control" id="totalGravada" name="totalGravada" value="0.00" oninput="calcularIVA()">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">IVA (13%)</label>
+                    <input type="number" step="0.01" class="form-control" id="iva" name="iva" value="0.00" readonly>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Total a Pagar</label>
+                    <input type="number" step="0.01" class="form-control" id="totalPagar" name="totalPagar" value="0.00" readonly>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- forma de pago -->
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header card-header-azul">
+                <i class="bi bi-credit-card"></i> Forma de Pago
+            </div>
+            <div class="card-body row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Forma de Pago</label>
+                    <select id="formaPago" class="form-select" name="formaPago">
+                        <option value="Efectivo">Efectivo</option>
+                        <option value="Tarjeta">Tarjeta</option>
+                        <option value="Transferencia">Transferencia</option>
+                        <option value="Crédito">Crédito</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Monto Pagado</label>
+                    <input type="number" step="0.01" class="form-control" id="montoPago name="montoPago">
+                </div>
+                <div class="col-md-6 d-none" id="divPlazo">
+                    <label class="form-label">Plazo (días)</label>
+                    <input type="number" class="form-control" name="plazo">
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-azul px-4">
+                <i class="bi bi-check-circle"></i> Generar DTE
+            </button>
+            <a href="~/Facturas/Index" class="btn btn-azul px-4">Cancelar</a>
+        </div>
+    </form>
+</div>
+
+<script src="~/js/departamentos.js"></script>
+<script src="~/js/factura.frontend.js"></script>
