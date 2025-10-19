@@ -49,6 +49,7 @@ CREATE TABLE Producto (
     Precio DECIMAL(18,2) NOT NULL,
     CategoriaId INT NULL,
 	Existencias INT NOT NULL,
+	UnidadMedida NVARCHAR(50) NULL,
     TipoItem INT DEFAULT 1, -- 1 = Bien, 2 = Servicio
     CONSTRAINT FK_Producto_Categoria FOREIGN KEY (CategoriaId)
         REFERENCES CategoriaProducto(CategoriaId)
@@ -66,7 +67,7 @@ CREATE TABLE Document (
     FechaEmision DATETIME NOT NULL,
     TipoDocumento NVARCHAR(50),
     Moneda NVARCHAR(10),
-    Estado NVARCHAR(50),
+    Estado NVARCHAR(50) NULL,
     Total DECIMAL(18,2) DEFAULT 0,
     Observaciones NVARCHAR(500),
     CONSTRAINT FK_Document_Emisor FOREIGN KEY (EmisorId)
