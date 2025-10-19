@@ -64,7 +64,7 @@ namespace FacturacionDTE.Controllers
             if (ModelState.IsValid)
             {
                 factura.FechaEmision = DateTime.Now;
-                factura.Estado = "Emitida";
+                //factura.Estado = "Emitida";
                 factura.TipoDocumento = "Factura consumidor final";
 
                 _context.Add(factura);

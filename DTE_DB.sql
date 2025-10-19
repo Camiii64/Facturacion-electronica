@@ -67,9 +67,9 @@ CREATE TABLE Document (
     FechaEmision DATETIME NOT NULL,
     TipoDocumento NVARCHAR(50),
     Moneda NVARCHAR(10),
-    Estado NVARCHAR(50) NULL,
     Total DECIMAL(18,2) DEFAULT 0,
     Observaciones NVARCHAR(500),
+	Estado NVARCHAR(50) NULL,
     CONSTRAINT FK_Document_Emisor FOREIGN KEY (EmisorId)
         REFERENCES Emisor(EmisorId),
     CONSTRAINT FK_Document_Cliente FOREIGN KEY (ClienteId)

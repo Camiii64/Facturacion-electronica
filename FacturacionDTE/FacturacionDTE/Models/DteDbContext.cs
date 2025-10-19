@@ -134,7 +134,8 @@ public partial class DteDbContext : DbContext
 
             entity.HasIndex(e => e.NumeroConsecutivo, "IDX_Document_Numero");
 
-            entity.Property(e => e.Estado).HasMaxLength(50);
+            
+            //entity.Property(e => e.Estado).HasMaxLength(50);
             entity.Property(e => e.FechaEmision).HasColumnType("datetime");
             entity.Property(e => e.Moneda).HasMaxLength(10);
             entity.Property(e => e.NumeroConsecutivo).HasMaxLength(50);
