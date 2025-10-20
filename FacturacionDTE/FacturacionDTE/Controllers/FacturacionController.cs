@@ -2,11 +2,20 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
+using FacturacionDTE.Services;
 
 namespace FacturacionDTE.Controllers
 {
     public class FacturasController : Controller
     {
+        [HttpPost]
+        public IActionResult GenerarPDF([FromBody] FacturaFrontend factura)
+        {
+            var pdfService = new DtePdfService();
+            var pdfBytes = pdfService.GenerarPdf(factura);
+
+            return File(pdfBytes, "application/pdf", $"DTE_{factura.NumeroFactura}.pdf");
+        }
         private readonly DteDbContext _context;
 
         public FacturasController(DteDbContext context)

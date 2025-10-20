@@ -130,9 +130,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener("submit", e => {
         e.preventDefault();
-        const xml = generarXmlSimulado();
-        descargarArchivo("DTE.xml", xml);
-        alert("✅ DTE generado correctamente.");
+        fetch('/Facturacion/GenerarPDF', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                TipoDte: form.tipoDte.value,
+                NumeroControl: form.numeroControl.value,
+                NumeroFactura: form.numeroControl.value,
+                FechaEmision: form.fecEmi.value,
+                ClienteNombre: form.nombre.value,
+                ClienteDocumento: form.numDocumento.value,
+                ClienteDepartamento: reDep.value,
+                ClienteMunicipio: reMun.value,
+                TotalNoSujetas: parseFloat(document.getElementById('totalNoSuj').value),
+                TotalExentas: parseFloat(document.getElementById('totalExenta').value),
+                TotalGravadas: parseFloat(document.getElementById('totalGravada').value),
+                Iva: parseFloat(document.getElementById('iva').value),
+                TotalPagar: parseFloat(document.getElementById('totalPagar').value),
+                Detalle: Array.from(document.querySelectorAll('#tablaProductos tbody tr')).map((tr, idx) => ({
+                    NroLinea: idx + 1,
+                    Descripcion: tr.querySelector('.descripcion').value,
+                    Cantidad: parseInt(tr.querySelector('.cantidad').value),
+                    PrecioUnitario: parseFloat(tr.querySelector('.precio').value),
+                    VentaGravada: parseFloat(tr.querySelector('.ventaGravada').value),
+                    Subtotal: parseFloat(tr.querySelector('.subtotal').value)
+                }))
+            })
+        })
+            .then(response => response.blob())
+            .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'DTE.pdf';
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+            });
+
     });
 
     function generarXmlSimulado() {
