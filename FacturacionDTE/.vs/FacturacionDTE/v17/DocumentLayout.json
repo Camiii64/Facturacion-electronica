@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\camib\\OneDrive\\Documentos\\GitHub\\Facturacion-electronica\\FacturacionDTE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D6711C5C-DEBE-4193-B29F-E7CBBF28E761}|FacturacionDTE\\FacturacionDTE.csproj|c:\\users\\camib\\onedrive\\documentos\\github\\facturacion-electronica\\facturaciondte\\facturaciondte\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D6711C5C-DEBE-4193-B29F-E7CBBF28E761}|FacturacionDTE\\FacturacionDTE.csproj|solutionrelative:facturaciondte\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{D6711C5C-DEBE-4193-B29F-E7CBBF28E761}|FacturacionDTE\\FacturacionDTE.csproj|c:\\users\\camib\\onedrive\\documentos\\github\\facturacion-electronica\\facturaciondte\\facturaciondte\\wwwroot\\xml\\style.xsl||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{D6711C5C-DEBE-4193-B29F-E7CBBF28E761}|FacturacionDTE\\FacturacionDTE.csproj|solutionrelative:facturaciondte\\wwwroot\\xml\\style.xsl||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6711C5C-DEBE-4193-B29F-E7CBBF28E761}|FacturacionDTE\\FacturacionDTE.csproj|c:\\users\\camib\\onedrive\\documentos\\github\\facturacion-electronica\\facturaciondte\\facturaciondte\\wwwroot\\js\\factura.frontend.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{D6711C5C-DEBE-4193-B29F-E7CBBF28E761}|FacturacionDTE\\FacturacionDTE.csproj|solutionrelative:facturaciondte\\wwwroot\\js\\factura.frontend.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D6711C5C-DEBE-4193-B29F-E7CBBF28E761}|FacturacionDTE\\FacturacionDTE.csproj|c:\\users\\camib\\onedrive\\documentos\\github\\facturacion-electronica\\facturaciondte\\facturaciondte\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,24 +22,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\camib\\OneDrive\\Documentos\\GitHub\\Facturacion-electronica\\FacturacionDTE\\FacturacionDTE\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "FacturacionDTE\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\camib\\OneDrive\\Documentos\\GitHub\\Facturacion-electronica\\FacturacionDTE\\FacturacionDTE\\appsettings.Development.json",
-              "RelativeToolTip": "FacturacionDTE\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-20T02:50:58.405Z",
+              "DocumentIndex": 1,
+              "Title": "factura.frontend.js",
+              "DocumentMoniker": "C:\\Users\\camib\\OneDrive\\Documentos\\GitHub\\Facturacion-electronica\\FacturacionDTE\\FacturacionDTE\\wwwroot\\js\\factura.frontend.js",
+              "RelativeDocumentMoniker": "FacturacionDTE\\wwwroot\\js\\factura.frontend.js",
+              "ToolTip": "C:\\Users\\camib\\OneDrive\\Documentos\\GitHub\\Facturacion-electronica\\FacturacionDTE\\FacturacionDTE\\wwwroot\\js\\factura.frontend.js",
+              "RelativeToolTip": "FacturacionDTE\\wwwroot\\js\\factura.frontend.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALcAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-20T06:15:40.23Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Style.xsl",
+              "DocumentMoniker": "C:\\Users\\camib\\OneDrive\\Documentos\\GitHub\\Facturacion-electronica\\FacturacionDTE\\FacturacionDTE\\wwwroot\\xml\\Style.xsl",
+              "RelativeDocumentMoniker": "FacturacionDTE\\wwwroot\\xml\\Style.xsl",
+              "ToolTip": "C:\\Users\\camib\\OneDrive\\Documentos\\GitHub\\Facturacion-electronica\\FacturacionDTE\\FacturacionDTE\\wwwroot\\xml\\Style.xsl",
+              "RelativeToolTip": "FacturacionDTE\\wwwroot\\xml\\Style.xsl",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAMYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003586|",
+              "WhenOpened": "2025-10-20T05:59:02.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Document.cs",
               "DocumentMoniker": "C:\\Users\\camib\\OneDrive\\Documentos\\GitHub\\Facturacion-electronica\\FacturacionDTE\\FacturacionDTE\\Models\\Document.cs",
               "RelativeDocumentMoniker": "FacturacionDTE\\Models\\Document.cs",

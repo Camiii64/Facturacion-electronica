@@ -8,11 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\js\Departamento.js" />
+    <Compile Remove="Views\Clientes\**" />
+    <Content Remove="Views\Clientes\**" />
+    <EmbeddedResource Remove="Views\Clientes\**" />
+    <None Remove="Views\Clientes\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Clientes\" />
+    <Content Remove="wwwroot\js\Departamento.js" />
   </ItemGroup>
 
   <ItemGroup>

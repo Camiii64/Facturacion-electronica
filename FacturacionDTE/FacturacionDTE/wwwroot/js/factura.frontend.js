@@ -131,8 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener("submit", e => {
         e.preventDefault();
         const xml = generarXmlSimulado();
-        descargarArchivo("DTE_Simulado.xml", xml);
-        alert("✅ DTE generado correctamente (simulado).");
+        descargarArchivo("DTE.xml", xml);
+        alert("✅ DTE generado correctamente.");
     });
 
     function generarXmlSimulado() {
@@ -178,7 +178,13 @@ document.addEventListener('DOMContentLoaded', () => {
         root.appendChild(tot);
 
         doc.appendChild(root);
-        return new XMLSerializer().serializeToString(doc);
+        let xml = new XMLSerializer().serializeToString(doc);
+
+        // Agregar referencia al archivo XSL
+        const xslLink = '<?xml-stylesheet type="text/xsl" href="Style.xsl"?>\n';
+        xml = '<?xml version="1.0" encoding="UTF-8"?>\n' + xslLink + xml;
+
+        return xml;
     }
 
     function tag(doc, name, value) {
